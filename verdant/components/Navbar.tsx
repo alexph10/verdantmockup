@@ -71,7 +71,7 @@ export function Navbar() {
                   <div className="grid grid-cols-3 gap-8">
                     {/* API Column */}
                     <div className="flex flex-col justify-between">
-                      <Link href="/api" className="font-bold text-sm mb-3 hover:text-white/80 transition-colors">API</Link>
+                      <Link href="/products-detail#api" className="font-bold text-sm mb-3 hover:text-white/80 transition-colors">API</Link>
                       <div className="text-white/70 text-xs space-y-2">
                         <p>Carbon Indexing</p>
                         <p>Development</p>
@@ -81,7 +81,7 @@ export function Navbar() {
                     
                     {/* Enterprise Column */}
                     <div className="flex flex-col justify-between">
-                      <Link href="/enterprise" className="font-bold text-sm mb-3 hover:text-white/80 transition-colors">Enterprise</Link>
+                      <Link href="/products-detail#enterprise" className="font-bold text-sm mb-3 hover:text-white/80 transition-colors">Enterprise</Link>
                       <div className="text-white/70 text-xs space-y-2">
                         <p>Team Expense & Resource Management</p>
                         <p>Data Visualization & Specialized Carbon Monitoring</p>
@@ -91,7 +91,7 @@ export function Navbar() {
                     
                     {/* Everyone Else Column */}
                     <div className="flex flex-col justify-between">
-                      <Link href="/everyone-else" className="font-bold text-sm mb-3 hover:text-white/80 transition-colors">Everyone Else</Link>
+                      <Link href="/products-detail#households" className="font-bold text-sm mb-3 hover:text-white/80 transition-colors">Everyone Else</Link>
                       <div className="text-white/70 text-xs space-y-2">
                         <p>Carbon Footprint Calculation</p>
                         <p>Transportation & Food Item Carbon Indexing</p>
