@@ -209,9 +209,9 @@ export default function Documentation() {
         <main className="ml-64 mr-64 flex-1 p-12 min-h-screen">
           <div className="max-w-4xl space-y-16">
             <div>
-              <h1 className="text-4xl font-bold text-[#0b260e] mb-8">Welcome to the Verdant Documentation</h1>
+              <h1 className="text-4xl font-bold text-[#0b260e] mb-8">Verdant Documentation</h1>
               <p className="text-lg text-[#4a5f4d] leading-relaxed">
-                Verdant provides carbon tracking and environmental data solutions for developers, enterprises, and households. This documentation will guide you through integration, setup, and best practices.
+                Verdant provides carbon tracking and environmental data tools for developers, enterprises, and households. This documentation covers integration, setup, and API reference.
               </p>
             </div>
 
@@ -220,15 +220,15 @@ export default function Documentation() {
               <h2 className="text-3xl font-bold text-[#0b260e] mb-4">Introduction</h2>
               <div className="space-y-4 text-[#4a5f4d]">
                 <p>
-                  Verdant is a comprehensive carbon tracking platform designed to help individuals and organizations measure, monitor, and reduce their environmental impact. Our suite of tools includes:
+                  Verdant is a carbon tracking platform for individuals and organizations. The platform includes:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>API</strong> - RESTful API for developers to integrate carbon tracking into applications</li>
+                  <li><strong>API</strong> - RESTful API for integrating carbon tracking into applications</li>
                   <li><strong>Enterprise Dashboard</strong> - Organization-wide carbon management and ESG reporting</li>
                   <li><strong>Mobile App</strong> - Personal carbon tracking for households and individuals</li>
                 </ul>
                 <p>
-                  Whether you're building climate-conscious applications, managing corporate sustainability goals, or tracking your personal footprint, Verdant provides the tools you need.
+                  Build climate applications, manage corporate sustainability, or track personal footprints.
                 </p>
               </div>
             </section>
@@ -294,7 +294,7 @@ console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
               <h2 className="text-3xl font-bold text-[#0b260e] mb-4">Carbon Indexing API</h2>
               <div className="space-y-4 text-[#4a5f4d]">
                 <p>
-                  The Carbon Indexing API provides access to comprehensive emissions data across multiple categories.
+                  The Carbon Indexing API provides access to emissions data across multiple categories.
                 </p>
                 
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">Transportation Endpoints</h3>
@@ -347,7 +347,7 @@ console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
               <div className="space-y-4 text-[#4a5f4d]">
                 <h3 className="text-xl font-semibold text-[#0b260e]">Webhooks</h3>
                 <p>
-                  Subscribe to real-time events when carbon data is updated or thresholds are exceeded.
+                  Subscribe to events when carbon data updates or thresholds are exceeded.
                 </p>
                 <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm overflow-x-auto">
 {`await verdant.webhooks.create({
@@ -370,7 +370,7 @@ console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
               <h2 className="text-3xl font-bold text-[#0b260e] mb-4">Environmental Data</h2>
               <div className="space-y-4 text-[#4a5f4d]">
                 <p>
-                  Access comprehensive environmental metrics and emissions factors.
+                  Access environmental metrics and emissions factors.
                 </p>
                 
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">Product Database</h3>
@@ -400,7 +400,7 @@ console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
               <h2 className="text-3xl font-bold text-[#0b260e] mb-4">Team Management</h2>
               <div className="space-y-4 text-[#4a5f4d]">
                 <p>
-                  Manage your organization's carbon tracking with role-based access control.
+                  Manage organization carbon tracking with role-based access control.
                 </p>
                 
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">User Roles</h3>
@@ -412,7 +412,7 @@ console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
                 </ul>
 
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">Invite Team Members</h3>
-                <p>Invite colleagues via email or share unique registration links:</p>
+                <p>Invite colleagues via email or share registration links:</p>
                 <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm overflow-x-auto">
 {`await verdant.team.invite({
   email: 'colleague@company.com',
@@ -427,7 +427,7 @@ console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
               <h2 className="text-3xl font-bold text-[#0b260e] mb-4">Data Visualization</h2>
               <div className="space-y-4 text-[#4a5f4d]">
                 <p>
-                  Create custom dashboards and reports to visualize your organization's carbon footprint.
+                  Create dashboards and reports to visualize organization carbon footprint.
                 </p>
                 
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">Available Charts</h3>
@@ -440,7 +440,7 @@ console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
                 </ul>
 
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">Export Options</h3>
-                <p>Export visualizations and raw data in multiple formats:</p>
+                <p>Export visualizations and raw data:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>PDF reports (customizable branding)</li>
                   <li>CSV for spreadsheet analysis</li>
@@ -455,7 +455,7 @@ console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
               <div className="space-y-4 text-[#4a5f4d]">
                 <h3 className="text-xl font-semibold text-[#0b260e]">ESG Reporting</h3>
                 <p>
-                  Generate compliance-ready reports for major ESG frameworks:
+                  Generate compliance reports for ESG frameworks:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li><strong>GRI (Global Reporting Initiative)</strong> - Sustainability reporting standards</li>
@@ -601,7 +601,7 @@ console.log(\`Monthly footprint: \${monthlyTotal} kg CO2\`);
               <h2 className="text-3xl font-bold text-[#0b260e] mb-4">Support</h2>
               <div className="space-y-4 text-[#4a5f4d]">
                 <p>
-                  Need help? We're here to assist you:
+                  Get support:
                 </p>
                 <ul className="space-y-3">
                   <li>
