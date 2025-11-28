@@ -39,8 +39,8 @@ export default function TeamRoadmap() {
       </div>
       
       {/* Text Content - Left Side - Scrollable */}
-      <div className="flex-grow px-16 py-24 overflow-y-auto">
-        <div className="max-w-3xl">
+      <div className="flex-grow px-16 py-24 overflow-y-auto" style={{ maxWidth: '55%' }}>
+        <div className="w-full">
           <h1 className="text-5xl font-bold mb-8" style={{ color: '#021e06' }}>Team Roadmap</h1>
           
           <div className="space-y-8 text-base leading-relaxed pb-16" style={{ color: '#021e06' }}>

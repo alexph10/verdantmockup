@@ -39,8 +39,8 @@ export default function OurValues() {
       </div>
       
       {/* Text Content - Left Side */}
-      <div className="flex-grow flex items-center px-16 py-24">
-        <div className="max-w-3xl">
+      <div className="flex-grow flex items-center px-16 py-24" style={{ maxWidth: '55%' }}>
+        <div className="w-full">
           <h1 className="text-5xl font-bold mb-8" style={{ color: '#021e06' }}>Our Values</h1>
           
           <div className="space-y-6 text-lg leading-relaxed" style={{ color: '#021e06' }}>
