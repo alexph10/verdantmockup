@@ -49,7 +49,7 @@ export default function OurValues() {
             </p>
             
             <p>
-              We value collaboration over competition, recognizing that the climate crisis requires collective action. We build tools that empower individuals, businesses, and communities to take ownership of their environmental impact. We believe in making sustainability accessible, practical, and rewarding for everyone, regardless of their starting point.
+              We value collaboration over competition, recognizing that the climate crisis requires collective action. We build tools that help individuals, businesses, and communities take ownership of their environmental impact. We believe in making sustainability accessible, practical, and rewarding for everyone, regardless of their starting point.
             </p>
           </div>
         </div>

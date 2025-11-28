@@ -49,7 +49,7 @@ export default function WhoWeAre() {
             </p>
             
             <p className="text-lg">
-              Verdant proposes a list of business ideas we could technically develop to provide a secure foundation for like-minded founders, team-members, and families to utilize and achieve their sustainability goals. The target demographic is universal, as anyone can be encouraged to initiate their own personal goals for the Climate; and as there are no apparent brands or companies driving this mission, this brings a chance of good market positioning in Vietnam and possibly other countries.
+              Verdant proposes a list of business ideas we could technically develop to provide a secure foundation for like-minded founders, team-members, and families to use and achieve their sustainability goals. The target demographic is universal, as anyone can be encouraged to initiate their own personal goals for the Climate; and as there are no apparent brands or companies driving this mission, this brings a chance of good market positioning in Vietnam and possibly other countries.
             </p>
 
             <div>

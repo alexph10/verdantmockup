@@ -171,7 +171,7 @@ export default function TeamRoadmap() {
                 <li>Smart home device integration (subject to partnership availability)</li>
               </ul>
               <p className="mb-3">
-                <strong>Key Considerations:</strong> User retention, privacy management, battery optimization, and differentiation strategy.
+                <strong>Key Considerations:</strong> User retention, privacy management, battery efficiency, and differentiation strategy.
               </p>
             </div>
 
@@ -275,7 +275,7 @@ export default function TeamRoadmap() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold mb-1">Academic Institutions</h4>
-                    <p className="text-sm" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Research validation, methodology development, credibility enhancement</p>
+                    <p className="text-sm" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Research validation, methodology development, credibility building</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

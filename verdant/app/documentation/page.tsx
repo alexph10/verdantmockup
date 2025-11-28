@@ -414,7 +414,7 @@ export default function Documentation() {
                     <li>Added GraphQL API support</li>
                     <li>New machine learning-based prediction endpoints</li>
                     <li>Improved barcode scanning accuracy for mobile app</li>
-                    <li>Enhanced supply chain tracking features</li>
+                    <li>Updated supply chain tracking features</li>
                   </ul>
                 </div>
                 <div>
