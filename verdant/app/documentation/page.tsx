@@ -237,22 +237,19 @@ export default function Documentation() {
               <h2 className="text-3xl font-bold text-[#0b260e] mb-4">Installation</h2>
               <div className="space-y-4 text-[#4a5f4d]">
                 <h3 className="text-xl font-semibold text-[#0b260e]">JavaScript/Node.js</h3>
-                <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm">
-                  npm install @verdant/carbon-api
-                </div>
+                <p>
+                  Install the Verdant package using npm.
+                </p>
                 
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">Python</h3>
-                <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm">
-                  pip install verdant-carbon
-                </div>
+                <p>
+                  Install the Verdant package using pip.
+                </p>
 
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">Authentication</h3>
                 <p>
-                  Sign up at <a href="/book-demo" className="text-[#ff8c42] hover:underline">verdant.co</a> to get your API key. Include it in all requests:
+                  Sign up at <a href="/book-demo" className="text-[#ff8c42] hover:underline">verdant.co</a> to get your API key. Include it in all requests using the Authorization header with Bearer token format.
                 </p>
-                <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm">
-                  {`Authorization: Bearer YOUR_API_KEY`}
-                </div>
               </div>
             </section>
 
@@ -260,32 +257,10 @@ export default function Documentation() {
               <h2 className="text-3xl font-bold text-[#0b260e] mb-4">Quick Start</h2>
               <div className="space-y-4 text-[#4a5f4d]">
                 <h3 className="text-xl font-semibold text-[#0b260e]">Your First API Call</h3>
-                <p>Calculate the carbon emissions for a flight:</p>
-                <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm overflow-x-auto">
-{`const verdant = require('@verdant/carbon-api');
-
-verdant.init('YOUR_API_KEY');
-
-const emissions = await verdant.transport.flight({
-  origin: 'SFO',
-  destination: 'JFK',
-  passengers: 1,
-  class: 'economy'
-});
-
-console.log(\`CO2 emissions: \${emissions.co2_kg} kg\`);
-// Output: CO2 emissions: 385 kg`}
-                </div>
+                <p>Calculate carbon emissions for a flight by providing origin, destination, number of passengers, and class. The API returns CO2 emissions in kilograms.</p>
 
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">Track Product Footprint</h3>
-                <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm overflow-x-auto">
-{`const product = await verdant.products.lookup({
-  barcode: '012345678901'
-});
-
-console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
-// Output: Organic Bananas (1kg): 0.5 kg CO2`}
-                </div>
+                <p>Look up product carbon footprints using barcode scanning. The API returns product name and carbon emissions in kilograms.</p>
               </div>
             </section>
 
@@ -300,44 +275,18 @@ console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">Transportation Endpoints</h3>
                 <div className="bg-[#f3f1e6] border border-[#0b260e]/10 p-4 rounded">
                   <p className="font-mono text-sm mb-2"><span className="text-[#ff8c42] font-bold">POST</span> /v1/transport/flight</p>
-                  <p className="text-sm mb-3">Calculate emissions from air travel</p>
-                  <p className="text-xs font-semibold mb-1">Request Body:</p>
-                  <div className="bg-[#0b260e] text-[#f3f1e6] p-3 rounded font-mono text-xs overflow-x-auto">
-{`{
-  "origin": "SFO",
-  "destination": "JFK",
-  "passengers": 1,
-  "class": "economy",
-  "round_trip": false
-}`}
-                  </div>
+                  <p className="text-sm mb-3">Calculate emissions from air travel. Provide origin, destination, passengers, class, and round trip status.</p>
                 </div>
 
                 <div className="bg-[#f3f1e6] border border-[#0b260e]/10 p-4 rounded mt-4">
                   <p className="font-mono text-sm mb-2"><span className="text-[#ff8c42] font-bold">POST</span> /v1/transport/vehicle</p>
-                  <p className="text-sm mb-3">Calculate emissions from ground transportation</p>
-                  <p className="text-xs font-semibold mb-1">Request Body:</p>
-                  <div className="bg-[#0b260e] text-[#f3f1e6] p-3 rounded font-mono text-xs overflow-x-auto">
-{`{
-  "distance_km": 50,
-  "vehicle_type": "car",
-  "fuel_type": "gasoline"
-}`}
-                  </div>
+                  <p className="text-sm mb-3">Calculate emissions from ground transportation. Provide distance, vehicle type, and fuel type.</p>
                 </div>
 
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">Energy & Utilities</h3>
                 <div className="bg-[#f3f1e6] border border-[#0b260e]/10 p-4 rounded">
                   <p className="font-mono text-sm mb-2"><span className="text-[#ff8c42] font-bold">POST</span> /v1/energy/electricity</p>
-                  <p className="text-sm mb-3">Calculate emissions from electricity consumption</p>
-                  <p className="text-xs font-semibold mb-1">Request Body:</p>
-                  <div className="bg-[#0b260e] text-[#f3f1e6] p-3 rounded font-mono text-xs overflow-x-auto">
-{`{
-  "kwh": 500,
-  "country": "US",
-  "state": "CA"
-}`}
-                  </div>
+                  <p className="text-sm mb-3">Calculate emissions from electricity consumption. Provide kilowatt-hours, country, and state.</p>
                 </div>
               </div>
             </section>
@@ -347,22 +296,13 @@ console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
               <div className="space-y-4 text-[#4a5f4d]">
                 <h3 className="text-xl font-semibold text-[#0b260e]">Webhooks</h3>
                 <p>
-                  Subscribe to events when carbon data updates or thresholds are exceeded.
+                  Subscribe to events when carbon data updates or thresholds are exceeded. Configure webhook URLs and specify which events to receive.
                 </p>
-                <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm overflow-x-auto">
-{`await verdant.webhooks.create({
-  url: 'https://yourapp.com/webhooks/carbon',
-  events: ['threshold.exceeded', 'report.generated']
-});`}
-                </div>
 
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">Testing</h3>
                 <p>
-                  Use our sandbox environment for development and testing:
+                  Use the sandbox environment for development and testing. Initialize the client with sandbox mode enabled.
                 </p>
-                <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm">
-                  {`verdant.init('test_YOUR_API_KEY', { sandbox: true });`}
-                </div>
               </div>
             </section>
 
@@ -412,14 +352,7 @@ console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
                 </ul>
 
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">Invite Team Members</h3>
-                <p>Invite colleagues via email or share registration links:</p>
-                <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm overflow-x-auto">
-{`await verdant.team.invite({
-  email: 'colleague@company.com',
-  role: 'contributor',
-  department: 'operations'
-});`}
-                </div>
+                <p>Invite colleagues via email or share registration links. Specify email address, role, and department when sending invitations.</p>
               </div>
             </section>
 
@@ -466,16 +399,8 @@ console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
 
                 <h3 className="text-xl font-semibold text-[#0b260e] mt-6">Supply Chain Tracking</h3>
                 <p>
-                  Track Scope 3 emissions across your supply chain:
+                  Track Scope 3 emissions across your supply chain. Add suppliers with name, category, annual spend, and emissions factors to calculate total supply chain impact.
                 </p>
-                <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm overflow-x-auto">
-{`await verdant.supplyChain.addSupplier({
-  name: 'Supplier Inc',
-  category: 'manufacturing',
-  annual_spend: 500000,
-  emissions_factor: 2.5 // kg CO2 per dollar
-});`}
-                </div>
               </div>
             </section>
 
@@ -517,81 +442,17 @@ console.log(\`\${product.name}: \${product.carbon_kg} kg CO2\`);
               <div className="space-y-6 text-[#4a5f4d]">
                 <div>
                   <h3 className="text-xl font-semibold text-[#0b260e]">E-commerce Integration</h3>
-                  <p className="mb-3">Show carbon footprint on product pages:</p>
-                  <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm overflow-x-auto">
-{`// Show carbon badge on checkout
-const cart = await getShoppingCart();
-
-for (const item of cart.items) {
-  const footprint = await verdant.products.lookup({
-    sku: item.sku
-  });
-  
-  item.carbon_kg = footprint.carbon_kg;
-}
-
-// Calculate shipping emissions
-const shipping = await verdant.transport.vehicle({
-  distance_km: 50,
-  vehicle_type: 'delivery_van'
-});
-
-cart.total_carbon_kg = cart.items.reduce(
-  (sum, item) => sum + item.carbon_kg, 0
-) + shipping.co2_kg;`}
-                  </div>
+                  <p>Display carbon footprint on product pages and checkout. Look up product emissions by SKU and calculate shipping emissions based on delivery distance and vehicle type. Sum total cart emissions for customer transparency.</p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-semibold text-[#0b260e]">Corporate Dashboard</h3>
-                  <p className="mb-3">Track monthly emissions across departments:</p>
-                  <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm overflow-x-auto">
-{`const report = await verdant.enterprise.getReport({
-  start_date: '2025-10-01',
-  end_date: '2025-10-31',
-  group_by: 'department'
-});
-
-console.log('Emissions by Department:');
-report.departments.forEach(dept => {
-  console.log(\`\${dept.name}: \${dept.co2_kg} kg\`);
-});
-
-// Operations: 12,450 kg
-// Transportation: 8,320 kg
-// Facilities: 15,890 kg`}
-                  </div>
+                  <p>Track monthly emissions across departments. Generate reports grouped by department with start and end dates. View emissions breakdowns for operations, transportation, and facilities.</p>
                 </div>
 
                 <div>
                   <h3 className="text-xl font-semibold text-[#0b260e]">Personal Carbon Tracker</h3>
-                  <p className="mb-3">Build a simple household tracker:</p>
-                  <div className="bg-[#0b260e] text-[#f3f1e6] p-4 rounded font-mono text-sm overflow-x-auto">
-{`// Track monthly utilities
-const electricity = await verdant.energy.electricity({
-  kwh: 850,
-  state: 'CA'
-});
-
-const gas = await verdant.energy.naturalGas({
-  therms: 45
-});
-
-// Track commute
-const commute = await verdant.transport.vehicle({
-  distance_km: 480, // 20 days * 24 km
-  vehicle_type: 'car',
-  fuel_type: 'gasoline'
-});
-
-const monthlyTotal = 
-  electricity.co2_kg + 
-  gas.co2_kg + 
-  commute.co2_kg;
-
-console.log(\`Monthly footprint: \${monthlyTotal} kg CO2\`);
-// Monthly footprint: 645 kg CO2`}
-                  </div>
+                  <p>Build household carbon tracking. Monitor monthly utilities including electricity and natural gas consumption. Track commute emissions based on distance, vehicle type, and fuel. Calculate total monthly footprint by summing all sources.</p>
                 </div>
               </div>
             </section>
