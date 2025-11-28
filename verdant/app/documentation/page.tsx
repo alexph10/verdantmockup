@@ -409,7 +409,7 @@ export default function Documentation() {
               <h2 className="text-3xl font-bold text-[#0b260e] mb-4">Changelog</h2>
               <div className="space-y-6 text-[#4a5f4d]">
                 <div>
-                  <h3 className="text-lg font-semibold text-[#0b260e]">v2.1.0 - November 2025</h3>
+                  <h3 className="text-lg font-semibold text-[#0b260e]">v2.1.0</h3>
                   <ul className="list-disc pl-6 space-y-1 mt-2 text-sm">
                     <li>Added GraphQL API support</li>
                     <li>New machine learning-based prediction endpoints</li>
@@ -418,7 +418,7 @@ export default function Documentation() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#0b260e]">v2.0.0 - October 2025</h3>
+                  <h3 className="text-lg font-semibold text-[#0b260e]">v2.0.0</h3>
                   <ul className="list-disc pl-6 space-y-1 mt-2 text-sm">
                     <li>Complete API redesign with improved performance</li>
                     <li>Added webhook support for real-time notifications</li>
@@ -427,7 +427,7 @@ export default function Documentation() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#0b260e]">v1.5.0 - September 2025</h3>
+                  <h3 className="text-lg font-semibold text-[#0b260e]">v1.5.0</h3>
                   <ul className="list-disc pl-6 space-y-1 mt-2 text-sm">
                     <li>Added support for Scope 3 emissions tracking</li>
                     <li>Integration with major accounting software (QuickBooks, Xero)</li>
