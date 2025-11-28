@@ -5,7 +5,7 @@ import Link from 'next/link';
 export function Footer() {
   return (
     <footer className="relative z-50 bg-black/90 backdrop-blur-sm border-t border-white/10 text-white py-12 px-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-8" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-8" style={{ fontFamily: 'Satoshi, sans-serif' }}>
         {/* Logo/Brand */}
         <div>
           <Link href="/">
@@ -14,16 +14,6 @@ export function Footer() {
               <path d="M17.641 6.67098L23.719 12.749C28.0181 17.0481 35.2821 14.0091 35.2821 7.93105V0H0V24.312L17.641 6.67098Z" fill="white"/>
             </svg>
           </Link>
-        </div>
-
-        {/* Address */}
-        <div>
-          <h3 className="text-[10px] font-bold mb-2 uppercase tracking-wider">Address</h3>
-          <div className="text-[10px] text-white/80 space-y-1">
-            <p>Verdant Carbon Inc</p>
-            <p>123 Green Street</p>
-            <p>San Francisco, CA 94102</p>
-          </div>
         </div>
 
         {/* Contact */}

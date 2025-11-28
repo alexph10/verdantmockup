@@ -45,145 +45,344 @@ export default function TeamRoadmap() {
           
           <div className="space-y-8 text-base leading-relaxed pb-16" style={{ color: '#021e06' }}>
             <p className="text-lg">
-              This roadmap outlines our development plan for Verdant over the next 18-24 months. We've tried to be realistic about what we can actually build with limited resources and the technical challenges we'll face. Some dates might shift as we learn more about what works and what doesn't.
+              This roadmap outlines our development plan for Verdant. Our approach is phased and iterative, building foundational capabilities before expanding to serve broader markets.
             </p>
+            
+            {/* Customer Segments Diagram */}
+            <div className="my-12 p-8 rounded-lg" style={{ backgroundColor: 'rgba(2, 30, 6, 0.05)' }}>
+              <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: '#021e06' }}>Customer Segments</h3>
+              <div className="grid grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#cc5500' }}>
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <line x1="8" y1="21" x2="16" y2="21" />
+                      <line x1="12" y1="17" x2="12" y2="21" />
+                    </svg>
+                  </div>
+                  <h4 className="font-bold mb-2">Developers</h4>
+                  <p className="text-sm" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Building climate-conscious applications</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#cc5500' }}>
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <line x1="3" y1="9" x2="21" y2="9" />
+                      <line x1="9" y1="21" x2="9" y2="9" />
+                    </svg>
+                  </div>
+                  <h4 className="font-bold mb-2">Enterprises</h4>
+                  <p className="text-sm" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Managing corporate sustainability</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#cc5500' }}>
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                      <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                  </div>
+                  <h4 className="font-bold mb-2">Households</h4>
+                  <p className="text-sm" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Tracking personal carbon footprint</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Development Phases Diagram */}
+            <div className="my-12 p-8 rounded-lg" style={{ backgroundColor: 'rgba(2, 30, 6, 0.05)' }}>
+              <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: '#021e06' }}>Development Phases</h3>
+              <div className="flex items-center justify-between">
+                <div className="flex-1 text-center">
+                  <div className="w-16 h-16 mx-auto mb-3 rounded-lg flex items-center justify-center text-white font-bold text-xl" style={{ backgroundColor: '#cc5500' }}>1</div>
+                  <p className="font-semibold">Developer Platform</p>
+                </div>
+                <div className="w-12 h-1" style={{ backgroundColor: '#cc5500' }}></div>
+                <div className="flex-1 text-center">
+                  <div className="w-16 h-16 mx-auto mb-3 rounded-lg flex items-center justify-center text-white font-bold text-xl" style={{ backgroundColor: '#cc5500' }}>2</div>
+                  <p className="font-semibold">Enterprise Dashboard</p>
+                </div>
+                <div className="w-12 h-1" style={{ backgroundColor: '#cc5500' }}></div>
+                <div className="flex-1 text-center">
+                  <div className="w-16 h-16 mx-auto mb-3 rounded-lg flex items-center justify-center text-white font-bold text-xl" style={{ backgroundColor: '#cc5500' }}>3</div>
+                  <p className="font-semibold">Consumer Application</p>
+                </div>
+              </div>
+            </div>
             
             {/* Phase 1 */}
             <div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: '#021e06' }}>Phase 1: Getting Started (Early 2026)</h2>
-              <h3 className="text-xl font-semibold mb-3">Building the Basic API</h3>
+              <h2 className="text-3xl font-bold mb-4" style={{ color: '#021e06' }}>Phase 1: Developer Platform</h2>
+              <h3 className="text-xl font-semibold mb-3">Foundation Layer</h3>
               <p className="mb-3">
-                We're planning to start with a simple API that developers can use to calculate carbon emissions. The plan is to use Node.js and PostgreSQL since that's what we're most familiar with, and we'll likely host on AWS to start (though we might switch to something cheaper if costs get too high).
+                The initial phase focuses on creating a developer-facing platform for carbon emission calculations. This establishes the data infrastructure and calculation methodologies that support subsequent offerings.
               </p>
               <p className="mb-3">
-                <strong>What we're building:</strong>
+                <strong>Core Components:</strong>
               </p>
               <ul className="list-disc pl-6 space-y-2 mb-3">
-                <li>A REST API with basic authentication - probably JWT tokens to keep it simple</li>
-                <li>Carbon calculators for transportation (flights, cars, trains) using publicly available emission factors from DEFRA and EPA</li>
-                <li>A database with maybe 5,000-10,000 common products and their carbon footprints, scraped from existing datasets where we can find them</li>
-                <li>Basic documentation so people can actually use it</li>
-                <li>Maybe a JavaScript SDK if we have time</li>
+                <li>Developer platform with authentication and authorization</li>
+                <li>Carbon calculators for transportation modes (air, ground, rail) using government emission data</li>
+                <li>Product database containing carbon footprint information from public datasets</li>
+                <li>Documentation and integration guides</li>
+                <li>Code libraries for common programming languages</li>
               </ul>
               <p className="mb-3">
-                The main challenge here will be getting accurate data - a lot of carbon footprint information is outdated or not freely available. We'll probably have to make some estimates and be upfront about data quality.
-              </p>
-              <p>
-                <strong>Goal:</strong> Get 50-100 developers to sign up and actually try using it. If we can get even 10-20 people building things with it, that would be a good start.
+                <strong>Key Considerations:</strong> Data accuracy, source transparency, update frequency, and scalability requirements.
               </p>
             </div>
 
             {/* Phase 2 */}
             <div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: '#021e06' }}>Phase 2: Business Dashboard (Mid-Late 2026)</h2>
-              <h3 className="text-xl font-semibold mb-3">Making It Work for Companies</h3>
+              <h2 className="text-3xl font-bold mb-4" style={{ color: '#021e06' }}>Phase 2: Enterprise Dashboard</h2>
+              <h3 className="text-xl font-semibold mb-3">Business Intelligence Layer</h3>
               <p className="mb-3">
-                If the API gets some traction, we want to build a web dashboard that businesses can use without needing to code. This is probably going to be the hardest part because businesses have very specific reporting requirements and we'll need to learn a lot about compliance standards.
+                The enterprise dashboard provides businesses with direct access to carbon tracking and reporting capabilities through a web-based interface. This phase targets organizations requiring sustainability compliance and reporting.
               </p>
               <p className="mb-3">
-                <strong>Planned features:</strong>
+                <strong>Core Features:</strong>
               </p>
               <ul className="list-disc pl-6 space-y-2 mb-3">
-                <li>A web interface (probably Next.js) where companies can track their carbon emissions</li>
-                <li>Different user roles so managers can give access to their team</li>
-                <li>Hopefully connect to accounting software like QuickBooks - though their APIs are complicated so this might take longer than expected</li>
-                <li>Generate reports that match what regulators actually want to see (we'll need to research GRI and CDP standards more)</li>
-                <li>CSV and PDF exports since that's what people always ask for</li>
+                <li>Web interface for emission tracking and visualization</li>
+                <li>Role-based access control for team management</li>
+                <li>Third-party software integrations (accounting, ERP systems)</li>
+                <li>Compliance reporting aligned with international standards</li>
+                <li>Data export capabilities (spreadsheet, document formats)</li>
               </ul>
               <p className="mb-3">
-                Realistically, getting even 10-15 paying customers in the first year would be amazing. Vietnamese businesses might be interested since there's not much competition here yet. The tricky part will be pricing - we'll probably have to experiment to find what companies are actually willing to pay.
+                <strong>Key Considerations:</strong> Data security, regulatory compliance, multi-user workflows, and integration complexity.
               </p>
             </div>
 
             {/* Phase 3 */}
             <div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: '#021e06' }}>Phase 3: Consumer App (2027, hopefully)</h2>
-              <h3 className="text-xl font-semibold mb-3">For Regular People and Families</h3>
+              <h2 className="text-3xl font-bold mb-4" style={{ color: '#021e06' }}>Phase 3: Consumer Application</h2>
+              <h3 className="text-xl font-semibold mb-3">Individual Engagement Layer</h3>
               <p className="mb-3">
-                This is the part we're most excited about but also most uncertain. Building a consumer app that people actually want to use is really hard, and there are already some apps trying to do this. We'll need to figure out what makes ours different.
+                The consumer application extends carbon tracking capabilities to individual users and households through mobile platforms. This phase focuses on accessibility and user engagement.
               </p>
               <p className="mb-3">
-                <strong>Ideas for features:</strong>
+                <strong>Planned Features:</strong>
               </p>
               <ul className="list-disc pl-6 space-y-2 mb-3">
-                <li>Mobile app (probably React Native so we can do iOS and Android at once)</li>
-                <li>Take photos of utility bills and we'll try to calculate emissions from that - OCR technology exists but can be finicky</li>
-                <li>Track transportation automatically using phone GPS, though we'll need to be careful about battery drain and privacy</li>
-                <li>Maybe barcode scanning for food products, using databases like Open Food Facts</li>
-                <li>Some kind of gamification to keep people engaged - this is important because most sustainability apps have terrible retention</li>
+                <li>Cross-platform mobile application (iOS and Android)</li>
+                <li>Utility bill scanning and emission calculation</li>
+                <li>Location-based transportation tracking with privacy controls</li>
+                <li>Product barcode scanning using public databases</li>
+                <li>Gamification and engagement mechanisms</li>
+                <li>Smart home device integration (subject to partnership availability)</li>
               </ul>
               <p className="mb-3">
-                Smart home integration would be cool but requires partnerships with companies like Nest, which might be hard to get as a startup. We might have to skip this initially.
-              </p>
-              <p>
-                Getting people to download and actually use the app will be the biggest challenge. Most sustainability apps have less than 5% retention after a month. If we can get a few thousand people using it regularly, that would be success.
+                <strong>Key Considerations:</strong> User retention, privacy management, battery optimization, and differentiation strategy.
               </p>
             </div>
 
-            {/* Phase 4 */}
+            {/* Future Capabilities */}
             <div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: '#021e06' }}>Beyond: If Things Go Well</h2>
-              <h3 className="text-xl font-semibold mb-3">More Ambitious Ideas</h3>
+              <h2 className="text-3xl font-bold mb-4" style={{ color: '#021e06' }}>Future Capabilities</h2>
+              <h3 className="text-xl font-semibold mb-3">Advanced Features</h3>
               <p className="mb-3">
-                These are things we'd love to build if we get funding and the earlier phases work out. Some of these might not be realistic without significant investment or partnerships.
+                Additional capabilities planned for subsequent development phases, subject to resource availability and partnership opportunities.
               </p>
               <ul className="list-disc pl-6 space-y-2 mb-3">
-                <li>Machine learning for personalized recommendations - though we'd need a lot of data first to train models properly</li>
-                <li>Connecting directly to smart meters and IoT devices for automatic tracking - this would require hardware partnerships which are difficult to establish</li>
-                <li>Vietnamese language version since that's our local market</li>
-                <li>Better supply chain tracking for businesses, though this gets complicated fast</li>
+                <li>Personalized recommendation engine based on user behavior patterns</li>
+                <li>Direct smart meter and IoT device integration for automated tracking</li>
+                <li>Localization and language support for regional markets</li>
+                <li>Supply chain tracking and Scope 3 emissions for enterprise customers</li>
               </ul>
               <p className="mb-3">
-                Honestly, we're trying not to get too far ahead of ourselves here. A lot depends on whether the earlier phases gain traction and whether we can raise any funding.
+                <strong>Requirements:</strong> Sufficient user base for data patterns, strategic partnerships, additional funding, and expanded team capacity.
               </p>
             </div>
 
-            {/* Infrastructure & Operations */}
+            {/* Technical Architecture Diagram */}
+            <div className="my-12 p-8 rounded-lg" style={{ backgroundColor: 'rgba(2, 30, 6, 0.05)' }}>
+              <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: '#021e06' }}>Technical Infrastructure</h3>
+              <div className="grid grid-cols-2 gap-8">
+                <div>
+                  <h4 className="font-bold mb-3 flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#cc5500' }}></div>
+                    Data Management
+                  </h4>
+                  <ul className="space-y-2 text-sm ml-5" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>
+                    <li>• Emission factor databases</li>
+                    <li>• User data storage</li>
+                    <li>• Backup and recovery systems</li>
+                    <li>• Data encryption</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-bold mb-3 flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#cc5500' }}></div>
+                    Platform Operations
+                  </h4>
+                  <ul className="space-y-2 text-sm ml-5" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>
+                    <li>• Scalable hosting infrastructure</li>
+                    <li>• Monitoring and alerting</li>
+                    <li>• Automated testing pipelines</li>
+                    <li>• Deployment automation</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-bold mb-3 flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#cc5500' }}></div>
+                    Compliance & Security
+                  </h4>
+                  <ul className="space-y-2 text-sm ml-5" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>
+                    <li>• Data privacy regulations</li>
+                    <li>• Access controls</li>
+                    <li>• Audit logging</li>
+                    <li>• Security protocols</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-bold mb-3 flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#cc5500' }}></div>
+                    Integration Layer
+                  </h4>
+                  <ul className="space-y-2 text-sm ml-5" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>
+                    <li>• Third-party APIs</li>
+                    <li>• Webhook systems</li>
+                    <li>• Data synchronization</li>
+                    <li>• External data sources</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Strategic Partnerships Diagram */}
+            <div className="my-12 p-8 rounded-lg" style={{ backgroundColor: 'rgba(2, 30, 6, 0.05)' }}>
+              <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: '#021e06' }}>Strategic Partnerships</h3>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#cc5500' }}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold mb-1">Government & Regulatory Bodies</h4>
+                    <p className="text-sm" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Sustainability initiatives, grant programs, compliance frameworks</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#cc5500' }}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                      <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                      <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold mb-1">Academic Institutions</h4>
+                    <p className="text-sm" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Research validation, methodology development, credibility enhancement</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#cc5500' }}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 6v6l4 2" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold mb-1">Carbon Offset Organizations</h4>
+                    <p className="text-sm" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Marketplace integration, offset verification, impact measurement</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#cc5500' }}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                      <rect x="2" y="7" width="20" height="14" rx="2" />
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold mb-1">Software Providers</h4>
+                    <p className="text-sm" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Integration partners, data exchange, embedded solutions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Funding Strategy */}
             <div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: '#021e06' }}>The Technical Reality</h2>
+              <h2 className="text-3xl font-bold mb-4" style={{ color: '#021e06' }}>Funding Strategy</h2>
               <p className="mb-3">
-                <strong>What we need to figure out:</strong>
+                The funding approach follows a phased strategy aligned with product development milestones.
               </p>
-              <ul className="list-disc pl-6 space-y-2 mb-3">
-                <li>Keeping costs low while the platform grows - cloud hosting can get expensive fast</li>
-                <li>Data privacy compliance (GDPR, CCPA) which is complicated but necessary</li>
-                <li>Backing up data properly so we don't lose anything important</li>
-                <li>Setting up basic monitoring so we know when things break</li>
-                <li>Writing tests so we don't accidentally break things with new updates</li>
-              </ul>
-              <p className="mb-3">
-                We'll probably start with GitHub Actions for deployment since it's free for open source projects, and add more sophisticated tools as we grow. The hardest part will be balancing security/reliability with development speed when it's just a small team.
-              </p>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded flex items-center justify-center flex-shrink-0 text-white font-bold" style={{ backgroundColor: '#cc5500' }}>1</div>
+                  <div>
+                    <h4 className="font-semibold">Bootstrap Phase</h4>
+                    <p className="text-sm" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Initial development funded through founding team resources</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded flex items-center justify-center flex-shrink-0 text-white font-bold" style={{ backgroundColor: '#cc5500' }}>2</div>
+                  <div>
+                    <h4 className="font-semibold">Seed Funding</h4>
+                    <p className="text-sm" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Angel investors and startup accelerators upon demonstrating initial traction</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded flex items-center justify-center flex-shrink-0 text-white font-bold" style={{ backgroundColor: '#cc5500' }}>3</div>
+                  <div>
+                    <h4 className="font-semibold">Growth Capital</h4>
+                    <p className="text-sm" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Regional venture capital for market expansion and team growth</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Partnerships & Funding */}
-            <div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: '#021e06' }}>Money and Partnerships</h2>
-              <p className="mb-3">
-                <strong>Potential partnerships we'd like to explore:</strong>
-              </p>
-              <ul className="list-disc pl-6 space-y-2 mb-3">
-                <li>Vietnamese government sustainability initiatives - there might be grants or programs we could apply to</li>
-                <li>Universities for research validation - having academic backing would help credibility</li>
-                <li>Carbon offset organizations if we want to add a marketplace feature later</li>
-                <li>Maybe accounting software companies, though getting their attention as a startup is tough</li>
-              </ul>
-              <p className="mb-3">
-                For funding, we'll probably start by bootstrapping as much as we can. If we can show real traction with users, we might look for angel investors or startup accelerators in Vietnam or the region. The climate tech space is getting more attention but it's still competitive.
-              </p>
+            {/* Team Structure Diagram */}
+            <div className="my-12 p-8 rounded-lg" style={{ backgroundColor: 'rgba(2, 30, 6, 0.05)' }}>
+              <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: '#021e06' }}>Team Structure</h3>
+              <div className="space-y-6">
+                <div className="text-center">
+                  <div className="inline-block px-6 py-3 rounded-lg text-white font-bold" style={{ backgroundColor: '#cc5500' }}>
+                    Founding Team
+                  </div>
+                  <p className="text-sm mt-2" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Global Business background with technical capabilities</p>
+                </div>
+                <div className="flex justify-center gap-4">
+                  <div className="w-px h-12" style={{ backgroundColor: '#cc5500' }}></div>
+                </div>
+                <div className="grid grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="px-4 py-2 rounded border-2 font-semibold text-sm" style={{ borderColor: '#cc5500', color: '#021e06' }}>
+                      Engineering
+                    </div>
+                    <p className="text-xs mt-2" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Platform development</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="px-4 py-2 rounded border-2 font-semibold text-sm" style={{ borderColor: '#cc5500', color: '#021e06' }}>
+                      Sustainability
+                    </div>
+                    <p className="text-xs mt-2" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Carbon accounting expertise</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="px-4 py-2 rounded border-2 font-semibold text-sm" style={{ borderColor: '#cc5500', color: '#021e06' }}>
+                      Operations
+                    </div>
+                    <p className="text-xs mt-2" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>Business development</p>
+                  </div>
+                </div>
+              </div>
             </div>
-
+            
             {/* Team Growth */}
             <div className="mb-8">
-              <h2 className="text-3xl font-bold mb-4" style={{ color: '#021e06' }}>Team</h2>
+              <h2 className="text-3xl font-bold mb-4" style={{ color: '#021e06' }}>Team Composition</h2>
               <p className="mb-3">
-                We're starting with just our founding team - people who studied Global Business together and have some technical skills. None of us have built a company before so there will definitely be a learning curve.
+                <strong>Current Team:</strong> Founding members with Global Business education and technical capabilities.
               </p>
               <p className="mb-3">
-                If things go well, we'd want to bring in someone with real development experience and maybe a person who understands sustainability/carbon accounting better than we do. But hiring is expensive, so we need to be strategic about it and probably can't hire much in the first year unless we get funding.
+                <strong>Planned Expansion:</strong> Additional engineering resources for platform development, sustainability specialists for carbon accounting methodology, and operations personnel for business development.
               </p>
-              <p>
-                The advantage of working in Vietnam is that costs are lower than in US or Europe, so we might be able to stretch resources further. But finding people with both technical skills and interest in climate tech might be challenging.
+              <p className="mb-3">
+                <strong>Geographic Considerations:</strong> Vietnam-based operations provide cost advantages relative to US and European markets. Talent acquisition focuses on individuals with dual competency in technical skills and climate/sustainability domains.
               </p>
             </div>
           </div>
