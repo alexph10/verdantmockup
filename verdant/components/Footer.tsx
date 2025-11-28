@@ -18,7 +18,7 @@ export function Footer() {
 
         {/* Contact */}
         <div>
-          <h3 className="text-[10px] font-bold mb-2 uppercase tracking-wider">Kontakt</h3>
+          <h3 className="text-[10px] font-bold mb-2 uppercase tracking-wider">Contact</h3>
           <div className="text-[10px] text-white/80 space-y-1">
             <p>info@verdant.co</p>
             <p>+1 555 123 4567</p>
