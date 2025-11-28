@@ -97,7 +97,7 @@ export default function WhoWeAre() {
                     <strong>Global Players:</strong> Pawprint (UK-based consumer app), Watershed (enterprise carbon management), and Climatiq (carbon API). However, these are primarily focused on Western markets with limited Vietnamese language support or regional data.
                   </p>
                   <p className="mt-2">
-                    <strong>Local Landscape:</strong> Currently, there are no major Vietnamese competitors offering comprehensive carbon tracking solutions. Some sustainability consultancies offer manual carbon auditing services, but no digital platforms with our feature set exist in the local market.
+                    <strong>Local Landscape:</strong> Currently, there are no major Vietnamese competitors offering carbon tracking solutions. Some sustainability consultancies offer manual carbon auditing services, but no digital platforms with our feature set exist in the local market.
                   </p>
                 </div>
 
@@ -107,7 +107,7 @@ export default function WhoWeAre() {
                     <li><strong>Regional Focus:</strong> Purpose-built for Southeast Asian markets with Vietnamese language support, local emission factors, and regional transportation/food databases relevant to Vietnamese consumers and businesses.</li>
                     <li><strong>First-Mover Advantage:</strong> As Vietnam develops stricter environmental regulations and ESG reporting requirements, we're positioned to capture market share before international competitors localize.</li>
                     <li><strong>Cost Efficiency:</strong> Operating costs in Vietnam are 60-70% lower than Western competitors, allowing us to offer competitive pricing while maintaining margins.</li>
-                    <li><strong>Integrated Platform:</strong> Unlike competitors who specialize in one segment (consumer, enterprise, or API), we offer all three, creating cross-selling opportunities and a comprehensive ecosystem.</li>
+                    <li><strong>Integrated Platform:</strong> Unlike competitors who specialize in one segment (consumer, enterprise, or API), we offer all three, creating cross-selling opportunities and an ecosystem.</li>
                     <li><strong>Local Partnerships:</strong> Potential collaborations with Vietnamese government sustainability initiatives, local universities for research validation, and regional businesses for pilot programs give us credibility and market access that international competitors lack.</li>
                   </ul>
                 </div>
