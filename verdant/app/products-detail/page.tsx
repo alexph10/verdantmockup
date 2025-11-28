@@ -98,10 +98,10 @@ export default function ProductsDetail() {
               <div className="absolute top-0 left-0 w-full h-72 pointer-events-auto z-20">
                 <ProductModel modelPath="/statue-dusk.glb" scale={1.5} position={[0, -0.5, 0]} />
               </div>
-              <div className="h-full flex flex-col justify-end p-12 relative z-10">
-                <span className="text-sm font-mono mb-4" style={{ color: 'rgba(2, 30, 6, 0.5)' }}>01</span>
-                <h2 className="text-4xl font-bold mb-4" style={{ color: '#021e06' }}>API</h2>
-                <div className="w-full pr-4">
+              <div className="h-full flex flex-col justify-end p-16 relative z-10">
+                <span className="text-sm font-mono mb-6" style={{ color: 'rgba(2, 30, 6, 0.5)' }}>01</span>
+                <h2 className="text-4xl font-bold mb-6" style={{ color: '#021e06' }}>API</h2>
+                <div className="w-full pr-8">
                   <p className="text-base mb-3" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>
                     <strong>Carbon Data Integration for Developers</strong>
                   </p>
@@ -128,10 +128,10 @@ export default function ProductsDetail() {
               <div className="absolute top-0 left-0 w-full h-72 pointer-events-auto z-20">
                 <ProductModel modelPath="/texan-forest.glb" scale={0.8} position={[0, -0.5, 0]} />
               </div>
-              <div className="h-full flex flex-col justify-end p-12 relative z-10">
-                <span className="text-sm font-mono mb-4" style={{ color: 'rgba(2, 30, 6, 0.5)' }}>02</span>
-                <h2 className="text-4xl font-bold mb-4" style={{ color: '#021e06' }}>Enterprise</h2>
-                <div className="w-full pr-4">
+              <div className="h-full flex flex-col justify-end p-16 relative z-10">
+                <span className="text-sm font-mono mb-6" style={{ color: 'rgba(2, 30, 6, 0.5)' }}>02</span>
+                <h2 className="text-4xl font-bold mb-6" style={{ color: '#021e06' }}>Enterprise</h2>
+                <div className="w-full pr-8">
                   <p className="text-base mb-3" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>
                     <strong>Organization-Wide Carbon Management</strong>
                   </p>
@@ -158,10 +158,10 @@ export default function ProductsDetail() {
               <div className="absolute top-0 left-0 w-full h-72 pointer-events-auto z-20">
                 <ProductModel modelPath="/pine-forest.glb" scale={0.8} position={[0, -0.5, 0]} />
               </div>
-              <div className="h-full flex flex-col justify-end p-12 relative z-10">
-                <span className="text-sm font-mono mb-4" style={{ color: 'rgba(2, 30, 6, 0.5)' }}>03</span>
-                <h2 className="text-4xl font-bold mb-4" style={{ color: '#021e06' }}>Households</h2>
-                <div className="w-full pr-4">
+              <div className="h-full flex flex-col justify-end p-16 relative z-10">
+                <span className="text-sm font-mono mb-6" style={{ color: 'rgba(2, 30, 6, 0.5)' }}>03</span>
+                <h2 className="text-4xl font-bold mb-6" style={{ color: '#021e06' }}>Households</h2>
+                <div className="w-full pr-8">
                   <p className="text-base mb-3" style={{ color: 'rgba(2, 30, 6, 0.7)' }}>
                     <strong>Personal Carbon Tracking for Families</strong>
                   </p>
