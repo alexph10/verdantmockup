@@ -19,10 +19,10 @@ export function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-[9999] bg-black/90 backdrop-blur-sm" style={{ fontFamily: 'Satoshi, sans-serif' }}>
-        <div className="flex items-center justify-center px-8 py-2 border-b border-white/20">
+        <div className="flex items-center justify-center px-8 py-5 border-b border-white/20">
           {/* Logo on left */}
           <Link href="/" className="absolute left-8" onClick={() => setActiveDropdown(null)}>
-            <svg width="20" height="28" viewBox="0 0 36 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="32" height="40" viewBox="0 0 36 41" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M17.641 33.429L11.563 27.351C7.26395 23.052 0 26.091 0 32.169V40.1H35.2821V15.788L17.641 33.429Z" fill="white"/>
               <path d="M17.641 6.67098L23.719 12.749C28.0181 17.0481 35.2821 14.0091 35.2821 7.93105V0H0V24.312L17.641 6.67098Z" fill="white"/>
             </svg>
@@ -30,29 +30,29 @@ export function Navbar() {
           
           {/* Center navigation links */}
           <div className="flex items-center gap-8">
-            <Link href="/who-we-are" className="text-white/80 text-xs transition-colors duration-200">
+            <Link href="/who-we-are" className="text-white/80 text-sm transition-colors duration-200">
               Who we are
             </Link>
             <button 
               onClick={() => toggleDropdown('product')} 
-              className={`text-xs transition-colors duration-200 ${activeDropdown === 'product' ? 'text-white' : 'text-white/80'}`}
+              className={`text-sm transition-colors duration-200 ${activeDropdown === 'product' ? 'text-white' : 'text-white/80'}`}
             >
               Product
             </button>
-            <Link href="/our-values" className="text-white/80 text-xs transition-colors duration-200">
+            <Link href="/our-values" className="text-white/80 text-sm transition-colors duration-200">
               Our values
             </Link>
-            <Link href="/team-roadmap" className="text-white/80 text-xs transition-colors duration-200">
+            <Link href="/team-roadmap" className="text-white/80 text-sm transition-colors duration-200">
               Team Roadmap
             </Link>
           </div>
           
           {/* Buttons on right */}
           <div className="absolute right-8 flex items-center gap-3">
-            <Link href="/documentation" className="w-24 py-1 bg-[#021e06] text-white hover:bg-[#033d0c] transition-colors duration-200 font-normal text-[10px] shadow-sm text-center">
+            <Link href="/documentation" className="px-4 py-2 bg-[#021e06] text-white hover:bg-[#033d0c] transition-colors duration-200 font-normal text-sm shadow-sm text-center">
               Documentation
             </Link>
-            <Link href="/book-demo" className="w-24 py-1 bg-[#021e06] text-white hover:bg-[#033d0c] transition-colors duration-200 font-normal text-[10px] shadow-sm text-center">
+            <Link href="/book-demo" className="px-4 py-2 bg-[#021e06] text-white hover:bg-[#033d0c] transition-colors duration-200 font-normal text-sm shadow-sm text-center">
               Book A Demo
             </Link>
           </div>
